@@ -2,6 +2,8 @@ import React from "react";
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
+import AIChat from "@/components/AIChat";
+import ContentGenerator from "@/components/ContentGenerator";
 
 import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
@@ -77,6 +79,26 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+
+      {/* AI Bileşenleri */}
+      {/* <RevealFx translateY="16" delay={0.6}>
+        <Column gap="xl" fillWidth>
+          <Heading as="h2" variant="display-strong-xs" wrap="balance">
+            AI Asistan ile Sohbet
+          </Heading>
+          <AIChat />
+        </Column>
+      </RevealFx> */}
+
+      {/* <RevealFx translateY="16" delay={0.7}>
+        <Column gap="xl" fillWidth>
+          <Heading as="h2" variant="display-strong-xs" wrap="balance">
+            İçerik Önerileri
+          </Heading>
+          <ContentGenerator />
+        </Column>
+      </RevealFx> */}
+
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
@@ -94,6 +116,8 @@ export default function Home() {
       )}
       <Projects range={[2]} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
+      <AIChat />
+      <ContentGenerator />
     </Column>
   );
 }
