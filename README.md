@@ -2,7 +2,8 @@
 
 View the [demo here](https://demo.magic-portfolio.com).
 
-![Magic Portfolio]("https://www.canva.com/design/DAGWJrktz3g/uEu9AeKKy3PqvgszcLygBA/view?utm_content=DAGWJrktz3g&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1eef7f335a")
+<img src="C:\Users\samet\Downloads\Bej Modern Profesyonel Kişisel LinkedIn Reklam Bandı.png" width="300" />
+
 
 
 # **Getting started**
