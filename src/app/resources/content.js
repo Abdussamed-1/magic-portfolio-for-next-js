@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Bioinformatician",
+  role: "Bioinformatician & Machine Learning Researcher",
   avatar: "/images/avatar.jpg",
   email: "sameterkalpofficial@gmail.com",
   location: "Europe/Istanbul", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -18,8 +18,8 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I share insights about bioinformatics, machine learning in drug discovery,
+      and the latest developments in computational biology.
     </>
   ),
 };
@@ -55,16 +55,16 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Bioinformatics & Machine Learning Enthusiast</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Latest project: <strong className="ml-4">Drug Discovery AI</strong></>,
+    href: "/work/drug-discovery-ai",
   },
   subline: (
     <>
-      I'm Samet, a Bioinformatician at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Samet, a Bioinformatician passionate about combining biological sciences with machine learning.
+      <br /> Currently working on drug discovery and molecular docking methods.
     </>
   ),
 };
@@ -98,45 +98,43 @@ const about = {
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Bioinformatics Research Lab",
+        timeframe: "2023 - Present",
+        role: "Research Assistant",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed machine learning models for drug-target interaction prediction, achieving 85% accuracy
+            in virtual screening.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Implemented molecular docking algorithms to optimize drug discovery pipeline, reducing
+            computational time by 40%.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Drug Discovery Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Computational Biology Center",
+        timeframe: "2022 - 2023",
+        role: "Bioinformatics Intern",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Analyzed genomic data using Python and R, contributing to 3 published research papers
+            in computational biology.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Developed automated pipelines for sequence analysis, improving processing efficiency by 60%.
           </>,
         ],
         images: [],
@@ -144,50 +142,54 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Inonu University",
+        description: <>MSc in Bioinformatics and Computational Biology</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Inonu University",
+        description: <>BSc in Molecular Biology and Genetics</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Machine Learning",
+        description: <>Expertise in developing ML models for drug discovery and protein structure prediction using PyTorch and scikit-learn.</>,
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "ML Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Bioinformatics Tools",
+        description: <>Proficient in molecular docking, sequence analysis, and structural bioinformatics using tools like AutoDock, BLAST, and PyMOL.</>,
+        images: [
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Bioinformatics Tools",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Programming",
+        description: <>Advanced programming skills in Python, R, and shell scripting for biological data analysis and automation.</>,
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "Programming",
             width: 16,
             height: 9,
           },
@@ -210,9 +212,41 @@ const work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Bioinformatics and Machine Learning projects by ${person.name}`,
+  projects: [
+    {
+      title: "Drug Discovery AI",
+      description: "Machine learning-based drug discovery platform for predicting drug-target interactions",
+      technologies: ["Python", "PyTorch", "scikit-learn", "AutoDock"],
+      image: "/images/projects/project-01/drug-discoverycover.jpg",
+      link: "/work/drug-discovery-ai",
+      featured: true
+    },
+    {
+      title: "Protein Structure Prediction",
+      description: "Deep learning model for predicting protein structures using sequence data",
+      technologies: ["Python", "TensorFlow", "BioPython", "PyMOL"],
+      image: "/images/projects/protein-structure/cover.jpg",
+      link: "/work/protein-structure-prediction",
+      featured: true
+    },
+    {
+      title: "Genomic Data Analysis Pipeline",
+      description: "Automated pipeline for analyzing and visualizing genomic data",
+      technologies: ["Python", "R", "Bash", "Docker"],
+      image: "/images/projects/genomic-analysis/cover.jpg",
+      link: "/work/genomic-analysis-pipeline",
+      featured: false
+    },
+    {
+      title: "Molecular Docking Optimization",
+      description: "Optimized molecular docking algorithms for faster drug screening",
+      technologies: ["Python", "AutoDock", "OpenMM", "RDKit"],
+      image: "/images/projects/molecular-docking/cover.jpg",
+      link: "/work/molecular-docking-optimization",
+      featured: false
+    }
+  ]
 };
 
 const gallery = {

@@ -90,12 +90,19 @@ const Carousel: React.FC<CarouselProps> = ({
         <SmartImage
           sizes={sizes}
           priority
-          radius="l"
+          radius="xl"
           border="neutral-alpha-weak"
           alt={images[activeIndex]?.alt}
           aspectRatio={aspectRatio}
           src={images[activeIndex]?.src}
+          objectFit="cover"
           style={{
+            boxShadow: "0 8px 32px 0 rgba(0,0,0,0.18)",
+            borderRadius: "2rem",
+            background: "none",
+            padding: 0,
+            margin: 0,
+            display: "block",
             ...(images.length > 1 && {
               cursor: "pointer",
             }),
